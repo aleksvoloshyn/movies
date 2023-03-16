@@ -1,25 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+import { Routes, Route } from 'react-router-dom'
+import { lazy, Suspense } from 'react'
+import './App.css'
 
+// import MoviesHome from './MoviesHome'
+// import Movies from './Movies'
+// import MovieDetail from './MovieDetail'
+// import NotFound from './NotFound'
+// import MovieCast from './MovieCast'
+// import MovieReviews from './MovieReviews'
+
+const Home = lazy(() => import('./MoviesHome' /*webpackChunkName: "Home"*/))
+const Details = lazy(() =>
+  import('./MovieDetail' /*webpackChunkName: "Details"*/)
+)
+const Movies = lazy(() => import('./Movies' /*webpackChunkName: "Movies"*/))
+const MovieReviews = lazy(() =>
+  import('./MovieReviews' /*webpackChunkName: "MovieReviews"*/)
+)
+const MovieCast = lazy(() =>
+  import('./MovieCast' /*webpackChunkName: "MovieCast"*/)
+)
+const NotFound = lazy(() =>
+  import('./NotFound' /*webpackChunkName: "NotFound"*/)
+)
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Suspense fallback={<div>Загружаем..</div>}>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/movies" element={<Movies />} />
+        <Route path="/movies/:id" element={<Details />}>
+          <Route path="cast" element={<MovieCast />} />
+          <Route path="reviews" element={<MovieReviews />} />
+        </Route>
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </Suspense>
+  )
 }
 
-export default App;
+export default App
