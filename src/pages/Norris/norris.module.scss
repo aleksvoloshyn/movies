@@ -1,0 +1,33 @@
+.chuck {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  font-family: Luckiest + Guy;
+  font-size: 20px;
+  text-align: center;
+}
+.img {
+  cursor: pointer;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover {
+    transform: scale(1.03);
+  }
+}
+
+.title {
+  font-family: anton;
+  color: black;
+}
+
+.text {
+  outline: 1px solid grey;
+  border-radius: 10px;
+  background-color: white;
+  padding: 20px;
+}
+.textWrap {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}

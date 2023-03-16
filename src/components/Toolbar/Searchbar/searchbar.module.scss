@@ -1,0 +1,21 @@
+@import './../../../styles/shared.scss';
+.searchBar {
+  color: $light-color;
+  fill: $light-color;
+}
+
+.searchLogo {
+  width: 18px;
+  height: 18px;
+  margin-right: 10px;
+  margin-top: 4px;
+}
+
+.searchInput {
+  border: none;
+  outline: none;
+}
+
+.searchLabel {
+  display: flex;
+}

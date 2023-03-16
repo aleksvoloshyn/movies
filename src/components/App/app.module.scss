@@ -1,0 +1,16 @@
+.App {
+  min-height: 100vh;
+}
+
+.wrapper {
+  display: flex;
+  min-height: 100%;
+}
+
+.toolsWithBoard {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 26px;
+  padding-top: 12px;
+}
