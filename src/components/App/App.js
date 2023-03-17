@@ -13,7 +13,7 @@ import { Panel, PanelList, PanelListItem } from './app.styled.js'
 // import MovieReviews from './MovieReviews'
 
 const Home = lazy(() =>
-  import('./../../pages/MoviesHome/' /*webpackChunkName: "Home"*/)
+  import('./../../pages/MoviesHome' /*webpackChunkName: "Home"*/)
 )
 const Details = lazy(() =>
   import('./../../pages/MovieDetail' /*webpackChunkName: "Details"*/)

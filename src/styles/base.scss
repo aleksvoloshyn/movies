@@ -4,6 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Luckiest+Guy&family=Rubik+Dirt&family=Satisfy&family=Titan+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
 @import 'bootstrap/dist/css/bootstrap.min.css';
+
 // @import 'animate.css';
 *,
 *::before,
@@ -39,6 +40,7 @@ p {
 a {
   display: block;
   text-decoration: none;
+  color: inherit;
 }
 
 li {

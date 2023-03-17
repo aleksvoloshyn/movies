@@ -26,9 +26,11 @@ export const TrendingList = styled.ul`
   flex-wrap: wrap;
 `
 export const TrendingListItem = styled.li`
+  display: flex;
+  justify-content: center;
   width: 24%;
   margin-bottom: 16px;
   margin-right: 8px;
-  box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+  // box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
 `
 export const TrendingListItemNav = styled(NavLink)``

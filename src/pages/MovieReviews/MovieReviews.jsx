@@ -18,7 +18,7 @@ const MovieReviews = () => {
             <li
               key={rev.id}
               style={{
-                boxShadow: '5px 2px 15px -3px rgba(0, 0, 0, 0.78)',
+                boxShadow: 'rgba(0, 0, 0, 0.78) 1px 1px 4px -3px',
                 padding: '16px',
                 marginBottom: '12px',
               }}

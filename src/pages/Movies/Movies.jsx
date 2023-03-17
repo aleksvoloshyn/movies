@@ -1,5 +1,3 @@
-import { Button } from 'primereact/button'
-
 import { useState, useEffect } from 'react'
 
 import { useNavigate } from 'react-router-dom'
@@ -11,6 +9,7 @@ import {
   BackButton,
   SearchInput,
   SearchPanel,
+  SearchButton,
 } from './movies.styled'
 // import MovieDetail from '../MovieDetail'
 const Movies = () => {
@@ -50,7 +49,7 @@ const Movies = () => {
   }
 
   const onKeyPressSubmit = (e) => {
-    if (request === '') {
+    if (request === '' && showinfo) {
       setShowinfo(true)
       return
     }
@@ -81,13 +80,13 @@ const Movies = () => {
           onKeyPress={onKeyPressSubmit}
           placeholder="start to type movie title here..."
         />
-        <Button
+        <SearchButton
           type="submit"
           onClick={onSubmitHandler}
           className="p-button-danger"
         >
           search
-        </Button>
+        </SearchButton>
       </SearchPanel>
 
       {showinfo && (
@@ -108,7 +107,8 @@ const Movies = () => {
                   <MoviesListItemNav to={`/movies/${movie.id}`} end>
                     <div style={{ textAlign: 'center' }}>
                       <img
-                        style={{ height: '300px' }}
+                        width={'360px'}
+                        style={{ height: '360px' }}
                         src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
                         alt={movie.name}
                       />

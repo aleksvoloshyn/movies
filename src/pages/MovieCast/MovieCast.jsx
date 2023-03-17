@@ -10,7 +10,7 @@ const MovieCast = () => {
   const [cast, setCast] = useState([])
   useEffect(() => {
     getCastById(id).then((cast) => setCast(cast))
-  }, [])
+  }, [id])
   return (
     <div>
       <CastList>

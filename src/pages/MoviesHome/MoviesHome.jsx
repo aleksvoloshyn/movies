@@ -3,9 +3,6 @@ import { useState, useEffect } from 'react'
 import { getTrendingMovies } from './../../servises/moviesearch'
 import {
   Title,
-  // Panel,
-  // PanelList,
-  // PanelListItem,
   TrendingList,
   TrendingListItem,
   TrendingListItemNav,
@@ -18,17 +15,8 @@ const MoviesHome = () => {
   }, [])
   return (
     <>
-      {/* <Panel>
-        <PanelList>
-          <PanelListItem to="/" end>
-            Home
-          </PanelListItem>
-          <PanelListItem to="/movies">Movies</PanelListItem>
-        </PanelList>
-      </Panel> */}
       <Title>Trending movies</Title>
       <TrendingList>
-        {' '}
         {trendingMovies.length > 0 &&
           trendingMovies.map((movie) => {
             return (
@@ -36,7 +24,7 @@ const MoviesHome = () => {
                 <TrendingListItemNav to={`/movies/${movie.id}`} end>
                   <div style={{ textAlign: 'center' }}>
                     <img
-                      style={{ height: '300px' }}
+                      style={{ height: '360px' }}
                       src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
                       alt={movie.name}
                     />
