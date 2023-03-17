@@ -12,20 +12,16 @@ import { Panel, PanelList, PanelListItem } from './app.styled.js'
 // import MovieCast from './MovieCast'
 // import MovieReviews from './MovieReviews'
 
-const Home = lazy(() =>
-  import('./../../pages/MoviesHome' /*webpackChunkName: "Home"*/)
-)
+const Home = lazy(() => import('./../MoviesHome' /*webpackChunkName: "Home"*/))
 const Details = lazy(() =>
-  import('./../../pages/MovieDetail' /*webpackChunkName: "Details"*/)
+  import('./../MovieDetail' /*webpackChunkName: "Details"*/)
 )
-const Movies = lazy(() =>
-  import('./../../pages/Movies' /*webpackChunkName: "Movies"*/)
-)
+const Movies = lazy(() => import('./../Movies' /*webpackChunkName: "Movies"*/))
 const MovieReviews = lazy(() =>
-  import('./../../pages/MovieReviews' /*webpackChunkName: "MovieReviews"*/)
+  import('./../MovieReviews' /*webpackChunkName: "MovieReviews"*/)
 )
 const MovieCast = lazy(() =>
-  import('./../../pages/MovieCast' /*webpackChunkName: "MovieCast"*/)
+  import('./../MovieCast' /*webpackChunkName: "MovieCast"*/)
 )
 const NotFound = lazy(() =>
   import('./../NotFound' /*webpackChunkName: "NotFound"*/)

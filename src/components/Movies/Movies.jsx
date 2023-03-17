@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 
 import { useNavigate } from 'react-router-dom'
 import { getMovieByRequest } from './../../servises/moviesearch'
@@ -11,7 +11,7 @@ import {
   SearchPanel,
   SearchButton,
 } from './movies.styled'
-// import MovieDetail from '../MovieDetail'
+
 const Movies = () => {
   const navigate = useNavigate()
   const [request, setRequest] = useState('')
@@ -19,20 +19,8 @@ const Movies = () => {
   const [showinfo, setShowinfo] = useState(false)
 
   const onChangeHandler = (e) => {
-    // console.log(e.keyCode)
     setRequest(e.target.value)
   }
-
-  // useEffect(() => {
-  //   if (request === '') {
-  //     setShowinfo(true)
-  //     return
-  //   }
-
-  //   getMovieByRequest(request).then((items) => {
-  //     setMovies(items)
-  //   })
-  // }, [request])
 
   const onSubmitHandler = (e) => {
     e.preventDefault()
