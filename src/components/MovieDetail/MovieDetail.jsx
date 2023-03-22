@@ -15,6 +15,7 @@ const MovieDetail = () => {
   const [isLoading, setIsloading] = useState(true)
   const navigate = useNavigate()
   const [details, setDetails] = useState()
+
   useEffect(() => {
     getMovieById(id)
       .then((response) => setDetails(response))
